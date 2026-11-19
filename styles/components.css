@@ -121,7 +121,7 @@
 .about-text ol ul { list-style: disc; margin: 8px 0 8px 24px; font-weight: 400; color: var(--muted); font-size: 0.95rem; }
 
 /* КОНТАКТЫ */
-.contacts-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.contacts-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
 .booking-form__card { background: var(--panel); padding: 40px; margin: 0; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 fieldset { 
@@ -190,7 +190,7 @@ legend + .form-group {
 .captcha-box canvas { border-radius: 8px; background: var(--panel); border: 1px solid rgba(166,124,91,.3); flex-shrink: 0; }
 .captcha-input { width: 120px !important; flex-shrink: 0; text-align: center; }
 
-.map-wrap { display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 580px; background: var(--panel); scroll-margin-top: 100px; }
+.map-wrap { display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 580px; height: 100%; background: var(--panel); scroll-margin-top: 100px; }
 .map-wrap__heading { padding: 24px; }
 .map-wrap__heading h2 { margin-bottom: 4px; }
 .map-wrap__heading a { text-decoration: underline; text-underline-offset: 3px; }
@@ -312,3 +312,4 @@ input, textarea, select { max-width: 100%; box-sizing: border-box; }
 }
 
 .breadcrumbs { flex-wrap: wrap; overflow-wrap: anywhere; }
+
