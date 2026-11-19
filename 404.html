@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>СР1 | Анимации</title>
+<link href="logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+        .sr1-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+        .sr1-card { background: var(--panel); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+        .sr1-card h3 { margin-bottom: 20px; font-size: 1.1rem; }
+        
+        /* 1. Часы */
+        .clock { width: 80px; height: 80px; border: 3px solid var(--accent); border-radius: 50%; position: relative; margin: 0 auto; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom; background: var(--text); border-radius: 2px; }
+        .hour { width: 4px; height: 20px; margin-left: -2px; animation: spin 12s linear infinite; }
+        .minute { width: 2px; height: 30px; margin-left: -1px; animation: spin 4s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        
+        /* 2. Солнечная система */
+        .solar { width: 80px; height: 80px; border-radius: 50%; position: relative; margin: 0 auto; }
+        .sun { width: 20px; height: 20px; background: var(--accent); border-radius: 50%; position: absolute; top: 30px; left: 30px; }
+        .orbit { width: 70px; height: 70px; border: 1px solid rgba(166,124,91,.3); border-radius: 50%; position: absolute; top: 5px; left: 5px; animation: spin 3s linear infinite; }
+        .planet { width: 10px; height: 10px; background: var(--text); border-radius: 50%; position: absolute; top: 0; left: 30px; }
+        
+        /* 3. Панорама */
+        .panorama { width: 100%; height: 80px; overflow: hidden; position: relative; }
+        .panorama-track { display: flex; width: 200%; animation: slide 8s linear infinite; }
+        .panorama-track img { width: 50%; height: 80px; object-fit: cover; }
+        @keyframes slide { 100% { transform: translateX(-50%); } }
+        
+        /* 4. Произвольная фигура */
+        .morph { width: 80px; height: 80px; background: var(--accent); margin: 0 auto; animation: morphAnim 4s ease-in-out infinite; }
+        @keyframes morphAnim { 0%, 100% { border-radius: 50%; } 50% { border-radius: 0; transform: rotate(45deg); } }
+        
+        /* 5. Падающий шарик (CSS) */
+        .ball-container { width: 80px; height: 80px; position: relative; margin: 0 auto; overflow: hidden; }
+        .ball { width: 20px; height: 20px; background: var(--accent); border-radius: 50%; position: absolute; left: 30px; animation: bounceBall 1s ease-in-out infinite alternate; }
+        @keyframes bounceBall { from { top: 0; } to { top: 60px; } }
+        
+        /* 6. Прямоугольник (ИСПРАВЛЕНО) */
+        .rect-anim { width: 20px; height: 60px; background: var(--accent); margin: 0 auto; animation: rotateRect 3s linear infinite; }
+        @keyframes rotateRect { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="logo" href="index.html">
+<img alt="Логотип" src="logo.svg"/>
+<span>Анна Соколова</span>
+</a>
+<nav class="site-nav" id="site-nav">
+<ul class="site-nav__list">
+<li><a href="index.html">На главную</a></li>
+</ul>
+</nav><button aria-label="Включить тёмную тему" aria-pressed="false" class="theme-toggle" type="button">Тёмная тема</button>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню" class="burger" id="burger" type="button"><span></span><span></span><span></span></button></div>
+</header>
+<main class="container section">
+<h1 class="section-title">Раздел СР1 (Самостоятельные работы)</h1>
+<p class="section-subtitle">Демонстрация CSS-анимаций по заданию</p>
+<div class="sr1-grid">
+<div class="sr1-card">
+<h3>Часы</h3>
+<div class="clock"><div class="hand hour"></div><div class="hand minute"></div></div>
+</div>
+<div class="sr1-card">
+<h3>Солнечная система</h3>
+<div class="solar"><div class="sun"></div><div class="orbit"><div class="planet"></div></div></div>
+</div>
+<div class="sr1-card">
+<h3>Панорама</h3>
+<div class="panorama">
+<div class="panorama-track">
+<img alt="img1" src="../img + vid/hero.png"/>
+<img alt="img2" src="../img + vid/hero.png"/>
+</div>
+</div>
+</div>
+<div class="sr1-card">
+<h3>Фигура</h3>
+<div class="morph"></div>
+</div>
+<div class="sr1-card">
+<h3>Шарик</h3>
+<div class="ball-container"><div class="ball"></div></div>
+</div>
+<div class="sr1-card">
+<h3>Прямоугольник</h3>
+<div class="rect-anim"></div>
+</div>
+</div>
+<nav class="practice-nav" aria-label="Другие практические работы">
+<a class="btn btn-outline" href="css-lab.html">Карточки и сетки CSS</a>
+<a class="btn btn-outline" href="practice.html">Интерактивные упражнения</a>
+</nav>
+</main>
+<footer class="site-footer">
+<div class="container site-footer__bottom" style="justify-content: center; border-top: none; margin-top: 40px;">
+<a href="index.html" style="font-size: 1rem;">← Вернуться на главную</a>
+</div>
+</footer>
+<script src="site-entry.js" defer></script>
+</body>
+</html>

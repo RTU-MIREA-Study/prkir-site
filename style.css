@@ -1,0 +1,8 @@
+/* ITCSS: from general settings to explicit utilities. */
+@import url("styles/settings.css");
+@import url("styles/generic.css");
+@import url("styles/elements.css");
+@import url("styles/objects.css");
+@import url("styles/components.css");
+@import url("styles/utilities.css");
+@import url("styles/themes.css");

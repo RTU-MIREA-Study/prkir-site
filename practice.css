@@ -1,0 +1,39 @@
+.demo-page { padding-block: clamp(24px, 5vw, 56px) 64px; }
+.demo-header { text-align: center; margin-bottom: 32px; }
+.demo-header h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+.demo-header nav a { padding: 6px 12px; border: 1px solid var(--fieldset); border-radius: 8px; }
+.demo-page .demo-section {
+    background: var(--panel);
+    border: 1px solid var(--fieldset);
+    border-radius: var(--radius);
+    padding: clamp(16px, 3vw, 36px);
+    margin-bottom: 20px;
+    scroll-margin-top: 100px;
+}
+.demo-section > p { max-width: 68ch; margin-block: 12px; }
+.demo-section h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 16px; }
+.demo-section pre, .demo-section blockquote { background: var(--fieldset); padding: 12px; border-radius: 8px; }
+.demo-section ol, .demo-section ul { padding-inline-start: 24px; }
+.demo-section ol ul { list-style: disc; }
+.demo-section dl { display: grid; grid-template-columns: max-content 1fr; gap: 5px 18px; margin-block: 16px; }
+.demo-section dt { grid-column: 1; font-weight: 700; }
+.demo-section dd { grid-column: 2; }
+.demo-section input, .demo-section select { background: var(--bg); color: var(--text); }
+.demo-section .demo-cards article, #center-field, #cart-drop, #drawing-field { background: var(--fieldset); border-radius: 12px; }
+#drawing-field { display: grid; place-items: center; margin-block: 14px 0; }
+#drawing-field.drawing { cursor: crosshair; touch-action: none; }
+.drawing-hint { font-size: .875rem; padding: 10px; }
+.catalog-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 8px 14px; margin-bottom: 14px; }
+.catalog-filters label { display: grid; }
+.demo-section .cart-title { margin-top: 24px; }
+#cart-total { font-weight: 700; }
+#practice-code { width: min(100%, 220px); }
+#practice-challenge { display: inline; font-weight: 700; }
+#long-text { width: min(100%, 400px); }
+.demo-gallery { display: flex; flex-wrap: wrap; align-items: start; gap: 14px; margin-block: 16px; }
+#gallery { display: flex; flex-wrap: wrap; }
+#gallery button { padding: 3px; border: 1px solid var(--fieldset); border-radius: 8px; }
+#gallery .thumb { display: block; height: 60px; border-radius: 5px; }
+#multi-list li { border: 1px solid var(--fieldset); border-radius: 8px; }
+#center-field { margin-inline: 0; cursor: crosshair; }
+.demo-progress { border-radius: 4px; margin: 8px 0 12px; }
